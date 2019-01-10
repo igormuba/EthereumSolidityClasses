@@ -8,7 +8,7 @@ contract parent{
 }
 
 contract kid is parent{
-    uint kidNumber=1;
+    uint kidNumber=2;
     function getNumber() public view returns (uint){
         return kidNumber;
     }
