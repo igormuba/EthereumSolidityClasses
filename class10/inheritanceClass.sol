@@ -16,6 +16,6 @@ contract kid is parent{
 
 contract test is parent, kid{
     function callNumber() public view returns (uint){
-        getNumber();
+        return getNumber();
     }
 }
