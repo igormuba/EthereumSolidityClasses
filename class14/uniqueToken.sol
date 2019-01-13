@@ -43,6 +43,8 @@ contract uniqueToken{
     }
     
     function withdraw() public{
+        uint toSend = balance[msg.sender];
+	    balance[msg.sender]=0;
         msg.sender.transfer(balance[msg.sender]);
     }
     
