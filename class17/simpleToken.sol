@@ -18,6 +18,7 @@ contract simpleToken{
     
     function createToken(address _receiver, uint _amount) public{
         require(msg.sender == icoAddress);
+        require(balance[icoAddress]-_amount>=0);
         balance[icoAddress]-=_amount;
         balance[_receiver]+=_amount;
     }
